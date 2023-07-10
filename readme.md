@@ -1,4 +1,4 @@
-# NEWER Super Mario Bros. Wii
+# NEWER Super Mario Bros. Wii (modifed by aqua21, synel, and nugit for MOA)
 ## Source Code Public Release
 
 ### Preamble
