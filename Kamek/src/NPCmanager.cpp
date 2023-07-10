@@ -8,7 +8,7 @@
 
 //const char*  [] = { "yoyo", NULL };
 
-class daEnNPCBrain_c : public dEn_c {
+class dActor_c : public dEn_c {
 public:
 
 	int onCreate();
@@ -19,7 +19,7 @@ public:
 	void setupAnim(const char* name, float rate);
 	void setupModel(const char* arcName, const char* brresName, const char* mdlName);
 	
-	static daEnNPCBrain_c* build();
+	static dActor_c* build();
 
 	void playerCollision(ActivePhysics *apThis, ActivePhysics *apOther);
 	void yoshiCollision(ActivePhysics *apThis, ActivePhysics *apOther);
@@ -35,12 +35,12 @@ public:
 
 };
 
-daEnNPCBrain_c* daEnNPCBrain_c::build() {
-	void *buffer = AllocFromGameHeap1(sizeof(daEnNPCBrain_c));
-	return new(buffer) daEnNPCBrain_c;
+dActor_c* dActor_c::build() {
+	void *buffer = AllocFromGameHeap1(sizeof(dActor_c));
+	return new(buffer) dActor_c;
 }
 
-void daEnNPCBrain_c::playerCollision(ActivePhysics *apThis, ActivePhysics *apOther){
+void dActor_c::playerCollision(ActivePhysics *apThis, ActivePhysics *apOther){
 	u16 name = ((dEn_c*)apOther->owner)->name;
 	
 	if (name == PLAYER) {
@@ -51,11 +51,11 @@ void daEnNPCBrain_c::playerCollision(ActivePhysics *apThis, ActivePhysics *apOth
 	}
 }
 
-void daEnNPCBrain_c::yoshiCollision(ActivePhysics *apThis, ActivePhysics *apOther){
+void dActor_c::yoshiCollision(ActivePhysics *apThis, ActivePhysics *apOther){
 	return playerCollision(apThis, apOther);
 }
 
-void daEnNPCBrain_c::setupAnim(const char* name, float rate) {
+void dActor_c::setupAnim(const char* name, float rate) {
 	nw4r::g3d::ResAnmChr anmChr;
 
 	anmChr = this->resFile.GetResAnmChr(name);
@@ -65,7 +65,7 @@ void daEnNPCBrain_c::setupAnim(const char* name, float rate) {
 	this->animationChr.setUpdateRate(rate);
 }
 
-void daEnNPCBrain_c::setupModel(const char* arcName, const char* brresName, const char* mdlName) {
+void dActor_c::setupModel(const char* arcName, const char* brresName, const char* mdlName) {
 	this->resFile.data = getResource(arcName, brresName);
 	this->mdl = this->resFile.GetResMdl(mdlName);
 
@@ -73,7 +73,7 @@ void daEnNPCBrain_c::setupModel(const char* arcName, const char* brresName, cons
 }
 
 //Size modified due to my buddies not wanting to modify it.
-int daEnNPCBrain_c::onCreate() {
+int dActor_c::onCreate() {
 
 	this->scale = (Vec) {1.0, 1.0, 1.0};
 	this->model = settings >> 24 & 0xFF;		//nybbles 5-6
@@ -141,7 +141,7 @@ int daEnNPCBrain_c::onCreate() {
 	return true;
 }
 
-int daEnNPCBrain_c::onExecute() {
+int dActor_c::onExecute() {
 	bodyModel._vf1C();
 
 	if (this->animationChr.isAnimationDone()) {
@@ -151,11 +151,11 @@ int daEnNPCBrain_c::onExecute() {
 	return true;
 }
 
-int daEnNPCBrain_c::onDelete() {
+int dActor_c::onDelete() {
 	return true;
 }
 
-int daEnNPCBrain_c::onDraw() {
+int dActor_c::onDraw() {
 	matrix.translation(pos.x, pos.y, pos.z);
 	matrix.applyRotationYXZ(&rot.x, &rot.y, &rot.z);
 

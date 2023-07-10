@@ -7,7 +7,7 @@ hooks:
   - name: TalkBotManagerBuild
     type: add_func_pointer
     src_addr_pal: 0x80B0B090
-    target_func: 'daEnNPCBrain_c::build(void)'
+    target_func: 'dActor_c::build(void)'
 
   - name: UpdateTalkBotManagerSpriteInfo
     type: patch
