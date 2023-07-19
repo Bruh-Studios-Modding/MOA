@@ -2777,22 +2777,22 @@
       <entry value="7">Down + Right</entry>
     </list>
     <list nybble="6" title="style" comment="sign spritetex">
-      <entry value=0>t00.brres</entry>
-      <entry value=1>t01.brres</entry>
-      <entry value=2>t02.brres</entry>
-      <entry value=3>t03.brres</entry>
-      <entry value=4>t04.brres</entry>
-      <entry value=5>t05.brres</entry>
-      <entry value=6>t06.brres</entry>
-      <entry value=7>t07.brres</entry>
-      <entry value=8>t08.brres</entry>
-      <entry value=9>t09.brres</entry>
-      <entry value=A>t10.brres</entry>
-      <entry value=B>t11.brres</entry>
-      <entry value=C>t12.brres</entry>
-      <entry value=D>t13.brres</entry>
-      <entry value=E>t14.brres</entry>
-      <entry value=F>t15.brres</entry>
+      <entry value="0">t00.brres</entry>
+      <entry value="1">t01.brres</entry>
+      <entry value="2">t02.brres</entry>
+      <entry value="3">t03.brres</entry>
+      <entry value="4">t04.brres</entry>
+      <entry value="5">t05.brres</entry>
+      <entry value="6">t06.brres</entry>
+      <entry value="7">t07.brres</entry>
+      <entry value="8">t08.brres</entry>
+      <entry value="9">t09.brres</entry>
+      <entry value="10">t10.brres</entry>
+      <entry value="11">t11.brres</entry>
+      <entry value="12">t12.brres</entry>
+      <entry value="13">t13.brres</entry>
+      <entry value="14">t14.brres</entry>
+      <entry value="15">t15.brres</entry>
     </list>
     <checkbox nybble="11.4" title="Place Behind Other Sprites" comment="When enabled, this changes the relative Z-Order of the Signboard placing it further behind other sprites."/>
 </sprite> <!-- #310: Signboard - Arrow -->
