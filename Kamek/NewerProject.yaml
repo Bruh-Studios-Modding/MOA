@@ -77,4 +77,6 @@ modules:
   - processed/midwayFlag.yaml
   - processed/muncher.yaml
 # - processed/NPCmanager.yaml
-  - processed/smw_throws.yaml # OH FUCK I HOPE THIS WORKS
+  - processed/smw_throws.yaml
+# - processed/goombaTower.yaml
+# - processed/LiquidsTex.yaml

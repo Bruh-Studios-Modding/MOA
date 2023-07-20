@@ -2682,7 +2682,7 @@ struct dWaterInfo_s {
 };
 
 class dWaterManager_c {
-	private:
+	public:
 		dWaterInfo_s blocks[80];
 	public:
 		float current;
@@ -2907,6 +2907,22 @@ private:
 	void allocPlayerClass(u8 player_id);					// 800D6E00
 };
 
+struct WaterData {
+    float x;
+    float y;
+    float z;
+    float width;
+    float height;
+    u32 isInUse;
+    u8 type; /*        0 = water
+                    1 = lava
+                    2 = poison
+                    3 = round bubble
+                    4 = tall bubble
+                    5 = wide bubble */
+    u8 layer;
+    u16 pad;
+};
 
 class mTexture_c {
 public:

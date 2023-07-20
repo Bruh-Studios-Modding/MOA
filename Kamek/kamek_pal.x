@@ -1851,6 +1851,15 @@ SECTIONS {
 	loc_80038BE8 = 0x80038BE8; /* ASM HACK LOC BABYYYY */
 	getBelowSubType__14collisionMgr_c = 0x80070720;
 	sub_809CAE10 = 0x809CAE10; /* bad sub man, don't count on him to teach you C#! */
+
+    /* Goomba TOWER */
+
+	StateID_Turn__Goomba = 0x8035382C;
+	StateID_Ice__Goomba = 0x80358304;
+	StateID_DieFall__Goomba = 0x80357ef4;
+	StateID_DieOther__Goomba = 0x80358074;
+	StateID_Walk__Goomba = 0x803537ec;
+	ContinueFromLoadingCRSIN = 0x8091EC78;
 	/* UNKNOWN NAME = idk */
 
 	/* end new registers */
