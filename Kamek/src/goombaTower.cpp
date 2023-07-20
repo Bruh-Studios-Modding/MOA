@@ -26,6 +26,7 @@ public:
 	u8 stackSize;
 	u8 firstGoombaID;
 	
+	dStateBase_c* lastFirstGoombaState;
 	
 	bool isAnyGoombaInView();
 };
