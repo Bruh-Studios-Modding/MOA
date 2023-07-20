@@ -2796,5 +2796,59 @@
     </list>
     <checkbox nybble="11.4" title="Place Behind Other Sprites" comment="When enabled, this changes the relative Z-Order of the Signboard placing it further behind other sprites."/>
 </sprite> <!-- #310: Signboard - Arrow -->
+  <!-- Nope! I'm done! You guys test this crap. *clones Water* I'm moving on... -->
+  <!-- Test the 7 Modes through their associated conditions and fully describe them in the same way that Water is described. [Extremely Buggy] is naturally assumed for Falling mixed with the last three types. -->
+  <sprite id="139" name="Lava" noyoshi="True" notes="Place this in the level to generate lava. There are many different ways to use Lava.&lt;br&gt;&lt;br&gt;Location Lava: If you assign a Location ID, you can cause lava to appear only within the chosen Location instead of across the entire stage.&lt;br&gt;&lt;br&gt;Moving Lava: You can also create lava that rises and/or falls. This gets a little complicated, so be sure to read the related settings.&lt;br&gt;&lt;br&gt;Lava Crest's Maximum Length: The crest of Lava will stop drawing past 8192 pixels (512 blocks). You can avoid this by creating multiple Locations of Lava. Please note the first, left-most Location must be a multiple of 16 pixels long.">">
+    <dependency notes="When using Moving Lava, the Lava becomes loaded across the entire Area instead of just the active Zone. Please build your levels with this in mind. Additionally, do not use more than one Moving Lava in the same Area as only the top (highest Y-Axis) one will take effect. Unlike with Moving Water you cannot use Moving Lava in multiple Zones within the same area, unless you place them at the same Y-Axis. Also, be sure to reset your Sprite Settings if you switch between different setting groups of Moving Lava or Location Lava to prevent unusual bugs and behavior."/>
+   <!-- The different displays of the Speed option -->
+    <list nybble="5.2-5.4" title="Moving Lava - Rising Speed" comment="This determines the speed at which the Lava will rise, or rise and fall." requirednybble="5.1" requiredval="0">
+      <entry value="0">No Movement</entry>
+      <entry value="5">Very Slow</entry>
+      <entry value="6">Slow (Standard)</entry>
+      <entry value="7">Medium</entry>
+      <entry value="4">Fast</entry>
+      <entry value="1">Very Fast</entry>
+      <entry value="2">Very Fast</entry>
+      <entry value="3">Very Fast</entry>
+    </list> <!-- This version of the list shows when Rising Lava is set, regardless of Distance, Delay, or Triggering Event ID -->
+    <list nybble="5.2-5.4" title="Moving Lava - Falling Speed" comment="This determines the speed at which the Lava will fall." requirednybble="5.1,8-9" requiredval="1, 0">
+      <entry value="0">No Movement</entry>
+      <entry value="5">Very Slow</entry>
+      <entry value="6">Slow (Standard)</entry>
+      <entry value="7">Medium</entry>
+      <entry value="4">Fast</entry>
+      <entry value="1">Very Fast</entry>
+      <entry value="2">Very Fast</entry>
+      <entry value="3">Very Fast</entry>
+    </list> <!-- This version of the list shows when Falling Lava is set, and Distance is not set. You're okay... for now. -->
+    <list nybble="5.2-5.4" title="I really wouldn't do that if I were you..." comment="Right now, you've selected [Extremely Buggy]. You've made a terrible mistake somewhere and have combined the wrong settings." comment2="Please don't try to set Distance or Delays while using Falling Lava. You will not like the results. Please trust me." advancedcomment="Oh, so you turned on Advanced, did you? You think you're so smart... Well fine, I'll share the limited documentation we have on why you shouldn't use these settings: Falling Lava works in a peculiar way. When the appropriate event has not been activated, or there is no corresponding event, [Never ON] then the lava surface will appear [Distance] blocks higher. The lava will then sink this many blocks, respecting any delays. After waiting for the delay at the bottom, the lava surface will not rise again. Not exactly. Instead, it will 'skip' the rising part and 'jump' to immediately to the top. Additionally, using this with events will cause the lava to rise, instead of falling. [ON] But the starting point is the same higher distance. The difference is that the lava rises continuously as long as the event is enabled. [Endless Rising] If it is disabled, [OFF after ON] the lava surface will 'jump' back to where it started and remain there until the event is re-enabled. [Why bother?] Additionally, 1-5 on Movement Speed values have some additional odd glitchiness. Supposedly. So please, stop trying to combine settings like this. Or your level will suck." requirednybble="5.1,8-9" requiredval="1, 1-255">
+      <entry value="0">Reset Sprite Settings!</entry>
+      <entry value="5">Really Not Recommended</entry>
+      <entry value="6">Slow (Standard) (Not Recommended)</entry>
+      <entry value="7">Medium (Not Recommended)</entry>
+      <entry value="4">Really Not Recommended</entry>
+      <entry value="1">Really Not Recommended</entry>
+      <entry value="2">Really Not Recommended</entry>
+      <entry value="3">Really Not Recommended</entry>
+    </list> <!-- This version of the list shows when Falling Lava is set, and Distance is also is set. You bad bad boy... -->
+   <!-- Rising vs Falling Options -->
+    <dualbox nybble="5.1" title1="[???] Rising Forever" title2="[???] Falling Forever" comment="This determines which direction the Lava will move." requirednybble="5.2-5.4,8-9,6-7,1-2" requiredval="1-7, 0, 0, 0"/> <!-- Appears when Speed is set and Distance, Delays, and Triggering Event ID are NOT set -->
+    <dualbox nybble="5.1" title1="[???] Rising Forever while On" title2="[???] Falling Forever while On" comment="This determines which direction the Lava will move while the Triggering Event is activated." requirednybble="5.2-5.4,8-9,6-7,1-2" requiredval="1-7, 0, 0, 1-255"/> <!-- Appears when Speed and Triggering Event ID are set and Distance is NOT set -->
+    <dualbox nybble="5.1" title1="[???] Automatically Rising and Falling" title2="[Extremely Buggy]" comment="The Lava will automatically rise and fall in accordance with the set delays." requirednybble="5.2-5.4,8-9,1-2" requiredval="1-7, 1-255, 0"/> <!-- Appears when Speed and Distance are set, and Triggering Event ID is not set. -->
+    <dualbox nybble="5.1" title1="[???] Rises Distance while On, Falls when Off" title2="[Extremely Buggy]" comment="The Lava will rise the Distance value once activated, and stay at the top until the Triggering Event is deactivated. If the Triggering Event is deactivated before it rises the full distance, it will finish rising, then immediately start to fall." comment2="This option only applies if Delay values are both set to 0, Distance is set, and Triggering ID is set. Do not use [Extremely Buggy]. No really, don't. It won't help you any." requirednybble="5.2-5.4,8-9,6-7,1-2" requiredval="1-7, 1-255, 0, 1-255"/> <!-- Appears when Speed and Distance and Triggering Event ID are set, AND when Delays are NOT set. YEESH! -->
+    <dualbox nybble="5.1" title1="[???] Rising and Falling while On, Glitch-Returns when Off" title2="[Extremely Buggy]" comment="The Lava will rise and fall in accordance with the set delays while the Triggering Event is activated." comment2="When the Triggering Event is deactivated, the Lava will immediately return to its starting position in a glitchy manner. It is highly recommended to not cause this to happen in your level design. Use Event Chainers with Delays or the Event Looper to get this type of timing instead." requirednybble="5.2-5.4,8-9,6-7,1-2" requiredval="1-7, 1-255, 1-255, 1-255"/> <!-- Appears when Speed, Distance, Delays, AND Triggering Event are all set. -->
+   <!-- Things that change the Rising vs Falling options -->
+    <value nybble="8-9" title="Moving Lava - Distance" comment="This determines how many blocks the Lava will move." comment2="Setting this will drastically change the function of Moving Lava. Please keep this in mind." requirednybble="5.2-5.4,5.1" requiredval="1-7, 0"/> <!-- Appears when Speed is set, disappears if Falling is set. -->
+    <value nybble="8-9" title="I wouldn't do that if I were you..." comment="This determines how many blocks the Lava will move. Normally. But you are a bad person and are trying to set combinations of options that are known not to work. So stop right there and either change this back to zero, or select the option to the left of where it says [Extremely Buggy]." requirednybble="5.2-5.4,5.1" requiredval="1-7, 1"/> <!-- Appears when you've been a very bad boy and Falling is enabled with Distance set. -->
+    <value nybble="6" title="Moving Lava - Delay at Top" comment="This determines the delay when the Lava has finished rising." requirednybble="5.2-5.4,8-9" requiredval="1-7, 1-255"/> <!-- Appears when Speed and Distance are set -->
+    <value nybble="7" title="Moving Lava - Delay at Bottom" comment="This determines the delay when the Lava has returned to its starting position." comment2="The initial delay only can be set by using event-controlled Lava. Utilize Event Chainers to fake the delay settings if you need to set an initial delay." requirednybble="5.2-5.4,8-9" requiredval="1-7, 1-255"/> <!-- Appears when Speed and Distance are set -->
+    <value nybble="1.2-2.4" title="Moving Lava - Triggering Event ID" comment="The Moving Lava mode will be triggered when this Event is activated." requirednybble="5.2-5.4"/> <!-- Appears when Speed is set --> <!-- Needs modified to allow for 256 events. -->
+   <!-- Location Lava Options -->
+    <value nybble="11.2-12.4" title="Location Lava - Location ID" comment="Match with a Location ID to set a specific area in which to display Lava." comment2="Note that some sprites only work correctly in Non-Location Lava." advancedcomment="Location Lava only works properly with Location IDs 0-127. Location IDs 128-255 will cause the Lava to constantly move up and down slightly. It's unknown if a use can be found for this, so it remains documented here in the Advanced Comment." requirednybble="5.2-5.4" requiredval="0" idtype="Location"/> <!-- Appears only while Speed is not set -->
+    <checkbox nybble="10.1" title="Location Lava - Flat Top" comment="When enabled, the animated crest effect on the top portion of the Lava is removed. This creates a 'square' look." comment2="It's recommended to only use this when the Lava is touching a straight ceiling." requirednybble="5.2-5.4,11.2-12.4" requiredval="0, 1-255"/> <!-- Appears only if Location ID is set and hides if Speed is set -->
+    <checkbox nybble="10.2" title="Location Lava - Place Behind Layer 0" comment="When enabled, the Z-Order of the lava will be moved slightly so that it appears behind Layer 0 terrain." comment2="In order for this to work properly, the visibility settings for the Zone must be set to 'Normal'." requirednybble="5.2-5.4,11.2-12.4" requiredval="0, 1-255"/> <!-- Appears only if Location ID is set and hides if Speed is set -->
+
+    <checkbox nybble="10.4" title="Lava Waves" comment="Don't use with locations! Oh yeah and, don't make garbage levels with this. They exist for a reason. -aqua21" requirednybble="11.2-12.4" requiredval="0" />
+  </sprite> <!-- #139: Lava -->
 </sprites>
 <!-- thank you so much for a-playing my game! -->
