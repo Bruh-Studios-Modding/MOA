@@ -16,6 +16,7 @@ Kamek/kamek_twn.x
 Kamek/kamek_chn.x
 Kamek/tools/cw
 Kamek/tools/*.pyc
+Kamek/tmp
 *.pyc
 Kamek/tools/__pycache__
 __pycache__
