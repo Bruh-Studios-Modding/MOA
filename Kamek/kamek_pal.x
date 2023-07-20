@@ -1831,19 +1831,14 @@ SECTIONS {
 	JrClownEndDemoState = 0x80999988;
 	JrClownDemoWaitState = 0x80999884;
 	ClownDemoWaitState = 0x803580DC;
-
 	/* all the new registers */
-
 	midwayFlagOnCreate = 0x807e2130;
 	midwayFlagOnExecute = 0x807e2410;
 	StateID_Wait__15daChukanPoint_c = 0x80997d98;
 	StateID_SeaWait__15daChukanPoint_c = 0x80997e18;
 	continueOriginalCheckWater = 0x80075274;
-	
 	exeFrame__10dScStage_c = 0x8042a4e0;
-
 	/*shell stuff - updated 7.19.2023! */
-
 	daEnShell_c_StateID_Slide = 0x80353D64;
 	daEnShell_c_StateID_Sleep = 0x80353CE4;
 	getHeldDown__14dPlayerInput_c = 0x8005E500;
@@ -1851,9 +1846,7 @@ SECTIONS {
 	loc_80038BE8 = 0x80038BE8; /* ASM HACK LOC BABYYYY */
 	getBelowSubType__14collisionMgr_c = 0x80070720;
 	sub_809CAE10 = 0x809CAE10; /* bad sub man, don't count on him to teach you C#! */
-
     /* Goomba TOWER */
-
 	StateID_Turn__Goomba = 0x8035382C;
 	StateID_Ice__Goomba = 0x80358304;
 	StateID_DieFall__Goomba = 0x80357ef4;
@@ -1861,15 +1854,12 @@ SECTIONS {
 	StateID_Walk__Goomba = 0x803537ec;
 	ContinueFromLoadingCRSIN = 0x8091EC78;
 	/* UNKNOWN NAME = idk */
-
 	/* end new registers */
 	
-
 	spawnCoinJump__7StageE4FRC7Point3diii = 0x80066630;
 	sub_800757B0__14collisionMgr_cFP7Point3dPfUcic = 0x800757B0;
 	
 	sException__Q24nw4r2dbFv = 0x803DA860;
-
 
 	.text : {
 		FILL (0)

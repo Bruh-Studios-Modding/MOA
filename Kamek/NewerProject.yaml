@@ -79,4 +79,6 @@ modules:
 # - processed/NPCmanager.yaml
   - processed/smw_throws.yaml
 # - processed/goombaTower.yaml
+     # liquidtex garbage #
 # - processed/LiquidsTex.yaml
+  - processed/lavawaves.yaml
