@@ -3,6 +3,9 @@ code_address: 0x808D9000
 defines:
   - NEWER_WII
 modules:
+# the C#'s
+  - processed/k_stdlib.yaml
+# modules
   - processed/prolog.yaml
   - processed/corseClear.yaml
   - processed/apDebug.yaml
@@ -76,9 +79,9 @@ modules:
   - processed/actors.yaml
   - processed/midwayFlag.yaml
   - processed/muncher.yaml
-# - processed/NPCmanager.yaml
-  - processed/smw_throws.yaml
-# - processed/goombaTower.yaml
-     # liquidtex garbage #
-# - processed/LiquidsTex.yaml
-  - processed/lavawaves.yaml
+# - processed/NPCmanager.yaml # doesn't work
+  - processed/smw_throws.yaml # works
+# - processed/goombaTower.yaml # freezes game????
+     # liquidtex garbage # 
+# - processed/LiquidsTex.yaml #idk
+  - processed/lavawaves.yaml # works
