@@ -2850,5 +2850,15 @@
 
     <checkbox nybble="10.4" title="Lava Waves" comment="Don't use with locations! Oh yeah and, don't make garbage levels with this. They exist for a reason. -aqua21" requirednybble="11.2-12.4" requiredval="0" />
   </sprite> <!-- #139: Lava -->
+  
+  <sprite id="504" name="Upside Down Event" asmhacks="True" notes="A sprite for activating and deactivating upside down.">
+    <dualbox nybble="11.1" title1="Auto-start" title2="Event triggered" comment="This determines whether this Sprite can be triggered by an event or not." />
+    <value nybble="3-4" title="Triggering Event ID" idtype="Triggering Event" requirednybble="11.1" requiredval="1" />
+
+    <checkbox nybble="11.2" title="Loop" comment="When enabled, the target event will be triggered in a specified interval." />
+    <dualbox nybble="11.3" title1="Set" title2="Toggle" comment="This determines whether the target event gets deactivated if it's already activated." />
+    <dualbox nybble="10.4" title1="Activate" title2="Deactivate" requirednybble="11.3" requiredval="0" />
+    <value nybble="11.4-12.4" title="Interval" comment="You can select between ~1-32 seconds." requirednybble="11.2" requiredval="1" />
+  </sprite> <!-- #504: Upside Down Event -->
 </sprites>
 <!-- thank you so much for a-playing my game! -->
