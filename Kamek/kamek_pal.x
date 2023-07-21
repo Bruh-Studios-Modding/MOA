@@ -1891,13 +1891,15 @@ SECTIONS {
 	loc_80038BE8 = 0x80038BE8; /* ASM HACK LOC BABYYYY */
 	getBelowSubType__14collisionMgr_c = 0x80070720;
 	sub_809CAE10 = 0x809CAE10; /* bad sub man, don't count on him to teach you C#! */
-    /* Goomba TOWER */
+	
+    /* Goomba TOWER (scrapped) */
 	StateID_Turn__Goomba = 0x8035382C;
 	StateID_Ice__Goomba = 0x80358304;
 	StateID_DieFall__Goomba = 0x80357ef4;
 	StateID_DieOther__Goomba = 0x80358074;
 	StateID_Walk__Goomba = 0x803537ec;
 	ContinueFromLoadingCRSIN = 0x8091EC78;
+
 	/* waves of lava */
 	returnFromLavaCheck1False = 0x80075364;
 	returnFromLavaCheck1True = 0x80075304;
@@ -1908,6 +1910,39 @@ SECTIONS {
 	returnFromLavaCheck4True = 0x800EBE10;
 	returnFromLavaCheck5False = 0x8000BA70;
 	returnFromLavaCheck5True = 0x8000C5C0;
+
+	/* profiles! you fuckwad, asm! */
+	originalSprites = 0x8030a340;
+	originalProfiles = 0x8076a748;
+	ObjectProfileList = 0x8042a698;
+	spriteFiles = 0x8031ab4c;
+	profileNames = 0x80320b58;
+
+    /* Probubly some anti-gravity shit that won't ever be used... */
+	IsGravityEnabled = 0x802f6900;
+	GravityFloat_maybe = 0x8042bb44;
+	line_80054688 = 0x80054688;
+	line_8005714C = 0x8005714C;
+	ZoneMaxYValue_maybe = 0x80001910;
+	JumpingShit = 0x8005E6F0;
+	ArcNein = 0x80057A68;
+	loc_8005475C = 0x8005475C;
+	loc_8005467C = 0x8005467C;
+	ContinueFromFirstHook = 0x80070EF8;
+	ContinueFromSecondHook = 0x800E4540;
+	ContinueFromThirdHook = 0x80057108;
+	ContinueFromFourthHook = 0x80127720;
+	ContinueFromFifthHook = 0x80057154;
+	ContinueFromSixthHook_One = 0x8004C5EC;
+	ContinueFromSixthHook_Two = 0x8004C5C4;
+	ContinueFromSeventhHook = 0x8006CDE4;
+	ContinueFromEighthHook = 0x801C0D20;
+	ContinueFromNinthHook = 0x800B07F0;
+	ContinueFromTenthHook = 0x80128258;
+	ContinueFromEleventhHook = 0x80926774;
+	ContinueFromTwelvethHook = 0x8006F7B8;
+	ContinueFromThirteenthHook = 0x80064F54;
+	ContinueFromFourteenthHook = 0x80070CC4;
 	/* UNKNOWN NAME = idk */
 	/* end new registers */
 	

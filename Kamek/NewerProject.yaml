@@ -5,6 +5,8 @@ defines:
 modules:
 # the C#'s
   - processed/k_stdlib.yaml
+# asm profile
+  - processed/profile.yaml
 # modules
   - processed/prolog.yaml
   - processed/corseClear.yaml
@@ -77,11 +79,14 @@ modules:
 #  - processed/actorlog.yaml
   - processed/exceptionHandler.yaml
   - processed/actors.yaml
+#   brand new things. prehaps you can delete this to break the game.
   - processed/midwayFlag.yaml
   - processed/muncher.yaml
 # - processed/NPCmanager.yaml # doesn't work
   - processed/smw_throws.yaml # works
-# - processed/goombaTower.yaml # freezes game????
+# - processed/goombaTower.yaml # freezes game apon compilation???
      # liquidtex garbage # 
-# - processed/LiquidsTex.yaml #idk
-  - processed/lavawaves.yaml # works
+# - processed/LiquidsTex.yaml #figuring
+  - processed/lavawaves.yaml # works, may want to add more lavawave settings
+# - processed/tripleblock.yaml # go to hell playerID
+  - processed/UpsideDown.yaml 
