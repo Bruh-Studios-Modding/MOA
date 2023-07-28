@@ -1,4 +1,4 @@
-<wiidisc version="1" shiftfiles="true" root="/Moa" log="true">
+<wiidisc version="1" shiftfiles="true" root="/MOA" log="true">
 	<id game="SMN">
 		<region type="P"/>
 		<region type="E"/>
@@ -7,7 +7,7 @@
 		<region type="W"/>
 	</id>
 	<options>
-		<section name="Moa">
+		<section name="MOA">
 			<option name="Game" id="moacore" default="1">
 				<choice name="Enabled"><patch id="moacore"/></choice>
 			</option>
@@ -51,8 +51,8 @@
 		<folder external="LevelSamples" disc="/LevelSamples" create="true" />
 		<folder external="Others" />
 		<folder external="Others{$__region}" />
-		<folder external="WorldMaps" disc="/Maps" create="true" />
-		<folder external="WorldMaps/Texture" disc="/Maps" create="true" />
+		<folder external="Maps" disc="/Maps" create="true" />
+		<folder external="Maps/Texture" disc="/Maps" create="true" />
 		<folder external="Levels" disc="/Stage" create="true" />
 		
 		<!-- Save name change -->
@@ -61,7 +61,7 @@
 		<!-- JP -->    <memory offset="0x802F0FAC" value="4E6572534D4257" original="7769696D6A3264" />
 		<!-- KR/TW --> <memory offset="0x802F17CC" value="4E6572534D4257" original="7769696D6A3264" />
 		
-		<!-- Inject Newer loader -->
+		<!-- Inject MOA loader -->
 		<!-- EU --> <memory offset="0x80328478" value="80001800" original="8015BC60" />
 		<!-- US --> <memory offset="0x80328130" value="80001800" original="8015BB20" />
 		<!-- JP --> <memory offset="0x80327E98" value="80001800" original="8015B930" />
