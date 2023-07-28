@@ -1,3 +1,0 @@
----
-source_files: [../src/k_stdlib/kamek_asm.S, ../src/k_stdlib/hooks.cpp] #, ../src/k_stdlib/test.cpp]
-hooks: []
