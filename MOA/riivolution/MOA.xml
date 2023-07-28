@@ -51,7 +51,7 @@
 		<folder external="LevelSamples" disc="/LevelSamples" create="true" />
 		<folder external="Others" />
 		<folder external="Others{$__region}" />
-		<folder external="Worldmaps" disc="/Maps" create="true" />
+		<folder external="WorldMaps" disc="/Maps" create="true" />
 		<folder external="WorldMaps/Texture" disc="/Maps" create="true" />
 		<folder external="Levels" disc="/Stage" create="true" />
 		
